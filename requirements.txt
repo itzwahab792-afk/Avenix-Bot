@@ -1,0 +1,12 @@
+# ─── Discord ───────────────────────────────────────────────────────────────────
+discord.py[voice]>=2.3.2   # Core library + voice support (PyNaCl, aiohttp included)
+
+# ─── Music ─────────────────────────────────────────────────────────────────────
+yt-dlp>=2024.1.0            # YouTube audio extraction (actively maintained yt-dlp)
+PyNaCl>=1.5.0               # Voice encryption (required for voice channels)
+
+# ─── AI Chat ───────────────────────────────────────────────────────────────────
+aiohttp>=3.9.0              # Async HTTP client for Anthropic API calls
+
+# ─── Environment ───────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0        # Loads .env file into os.environ

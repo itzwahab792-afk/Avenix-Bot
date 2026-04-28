@@ -1,0 +1,38 @@
+FFMPEG SETUP INSTRUCTIONS
+=========================
+
+ffmpeg.exe cannot be bundled directly — you need to download it for your OS.
+
+─── WINDOWS (recommended) ────────────────────────────────────────────────────
+
+1. Go to: https://www.gyan.dev/ffmpeg/builds/
+2. Download: ffmpeg-release-essentials.zip  (under "release builds")
+3. Extract the zip
+4. Copy  bin\ffmpeg.exe  into the same folder as bot_combined.py
+
+Your folder should look like:
+   my_bot/
+   ├── bot_combined.py
+   ├── ffmpeg.exe          ← place it here
+   ├── .env
+   └── requirements.txt
+
+─── LINUX / MAC ──────────────────────────────────────────────────────────────
+
+The bot automatically falls back to the system ffmpeg if ffmpeg.exe is not found.
+
+  Ubuntu/Debian:   sudo apt install ffmpeg
+  macOS:           brew install ffmpeg
+
+─── VERIFY INSTALL ───────────────────────────────────────────────────────────
+
+Run in your terminal:
+   ffmpeg -version
+
+You should see version info. If not, ffmpeg is not on your PATH.
+
+─── QUICK START (after ffmpeg is set up) ─────────────────────────────────────
+
+1. Fill in your tokens in .env
+2. pip install -r requirements.txt
+3. python bot_combined.py
